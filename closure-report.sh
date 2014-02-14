@@ -51,7 +51,10 @@ done
 
 for release in f19repos[@] f20repos[@]; do
 (
-    echo http://japan.proximity.on.ca/koji-tag-stats/f20-updates-stats.html |
+    echo -e ' f20-stats:\n' \
+            'http://japan.proximity.on.ca/koji-tag-stats/f20-stats.html\n\n' \
+            'f20-updates-stats:\n' \
+            'http://japan.proximity.on.ca/koji-tag-stats/f20-updates-stats.html' |
     mutt -a \
     $(
         for repo in ${!release}; do
